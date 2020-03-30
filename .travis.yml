@@ -19,7 +19,7 @@
 
 dist: trusty 
 
-language: java cpp 
+language: java cpp
 
 compiler: gcc
 
