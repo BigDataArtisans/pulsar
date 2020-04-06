@@ -18,4 +18,43 @@ mvn compile -DskipTests
 git push bda master-bda:master
 
 
+\cp -rf pulsar-broker/data/test/java/org/apache/pulsar/common pulsar-broker/src/test/java/org/apache/pulsar
+git add -A
+git commit -am "Add common"
+git push bda master-bda:master --force
+git commit --allow-empty -m 'trigger rebuild common' && git push bda master-bda:master
+
+
+
+\cp -rf pulsar-broker/data/test/java/org/apache/pulsar/compaction pulsar-broker/src/test/java/org/apache/pulsar
+git add -A
+git commit -am "Add compaction"
+git push bda master-bda:master --force
+git commit --allow-empty -m 'trigger rebuild compaction' && git push bda master-bda:master
+
+
+
+
+\cp -rf pulsar-broker/data/test/java/org/apache/pulsar/discovery pulsar-broker/src/test/java/org/apache/pulsar
+git add -A
+git commit -am "Add discovery"
+git push bda master-bda:master
+git commit --allow-empty -m 'trigger rebuild' && git push bda master-bda:master
+
+
+\cp -rf pulsar-broker/data/test/java/org/apache/pulsar/io pulsar-broker/src/test/java/org/apache/pulsar
+git add -A
+git commit -am "Add io"
+git push bda master-bda:master --force
+git commit --allow-empty -m 'trigger rebuild io' && git push bda master-bda:master
+
+
+\cp -rf pulsar-broker/data/test/java/org/apache/pulsar/functions pulsar-broker/src/test/java/org/apache/pulsar
+git add -A
+git commit -am "Add functions"
+git push bda master-bda:master --force
+git commit --allow-empty -m 'trigger rebuild functions' && git push bda master-bda:master
+
+
+
 
