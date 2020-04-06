@@ -1,6 +1,19 @@
 
 
-\cp -rf pulsar-broker/data/test/java/org/apache/pulsar/websocket pulsar-broker/src/test/java/org/apache/pulsar
+\cp -rf pulsar-broker/data/test/java/org/apache/pulsar/utils pulsar-broker/src/test/java/org/apache/pulsar
+\cp -rf pulsar-broker/data/test/java/org/apache/pulsar/stats pulsar-broker/src/test/java/org/apache/pulsar
+\cp -rf pulsar-broker/data/test/java/org/apache/pulsar/schema pulsar-broker/src/test/java/org/apache/pulsar
+\cp -rf pulsar-broker/data/test/java/org/apache/pulsar/io pulsar-broker/src/test/java/org/apache/pulsar
+\cp -rf pulsar-broker/data/test/java/org/apache/pulsar/functions pulsar-broker/src/test/java/org/apache/pulsar
+\cp -rf pulsar-broker/data/test/java/org/apache/pulsar/discovery pulsar-broker/src/test/java/org/apache/pulsar
+\cp -rf pulsar-broker/data/test/java/org/apache/pulsar/compaction pulsar-broker/src/test/java/org/apache/pulsar
+\cp -rf pulsar-broker/data/test/java/org/apache/pulsar/common pulsar-broker/src/test/java/org/apache/pulsar
+\cp -rf pulsar-broker/data/test/java/org/apache/pulsar/client pulsar-broker/src/test/java/org/apache/pulsar
+
+
+cd pulsar-broker
+mvn compile -DskipTests
+
 
 git push bda master-bda:master
 
