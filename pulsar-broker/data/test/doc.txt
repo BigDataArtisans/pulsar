@@ -25,7 +25,6 @@ git push bda master-bda:master --force
 git commit --allow-empty -m 'trigger rebuild common' && git push bda master-bda:master
 
 
-
 \cp -rf pulsar-broker/data/test/java/org/apache/pulsar/compaction pulsar-broker/src/test/java/org/apache/pulsar
 git add -A
 git commit -am "Add compaction"
