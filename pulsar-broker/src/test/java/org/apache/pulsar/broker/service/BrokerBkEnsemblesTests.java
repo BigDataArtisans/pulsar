@@ -290,7 +290,7 @@ public class BrokerBkEnsemblesTests extends BkEnsemblesTestBase {
         final byte[] content = "test".getBytes();
 
         Consumer<byte[]> consumer = client.newConsumer().topic(topic1).subscriptionName(subName1).subscribe();
-        Producer<byte[]> producer = client.newProducer().topic(topic1).create();
+        org.apache.pulsar.client.api.Producer<byte[]> producer = client.newProducer().topic(topic1).create();
 
         producer.send(content);
         Message<byte[]> msg = consumer.receive();
